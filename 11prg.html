@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Greeting Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        input, button {
+            padding: 8px;
+            margin: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 2px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Personalized Greeting</h1>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button id="greetButton">Greet Me</button>
+        <p id="greetingMessage"></p>
+    </div>
+
+
+
+    <script>
+        // Accessing elements by their IDs
+        const nameInput = document.getElementById('nameInput');
+        const greetButton = document.getElementById('greetButton');
+        const greetingMessage = document.getElementById('greetingMessage');
+
+        // Adding an event listener to the button
+        greetButton.addEventListener('click', function() {
+            // Retrieve the value from the input field
+            const name = nameInput.value;
+
+            // Create a personalized greeting message
+            if (name) {
+                greetingMessage.innerHTML = `Hello, ${name}! Welcome to the page.`;
+            } else {
+                greetingMessage.innerHTML= 'Please enter your name.';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Arithmetic Operations</title>
+</head>
+<body>
+    <h1>Arithmetic Operations</h1>
+   
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1" placeholder="Enter a number"><br><br>
+   
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2" placeholder="Enter a number"><br><br>
+
+    <button onclick="performOperations()">Calculate</button>
+
+    <h3>Results:</h3>
+    <p id="addition"></p>
+    <p id="subtraction"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+
+    <script>
+        function performOperations() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+           
+            var add = num1 + num2;
+            var subtract = num1 - num2;
+            var multiply = num1 * num2;
+            var divide = num1 / num2;
+           
+            document.getElementById('addition').textContent = "Addition: " + add;
+            document.getElementById('subtraction').textContent = "Subtraction: " + subtract;
+            document.getElementById('multiplication').textContent = "Multiplication: " + multiply;
+            document.getElementById('division').textContent = "Division: " + divide;
+        }
+    </script>
+</body>
+</html>

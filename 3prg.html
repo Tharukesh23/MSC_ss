@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Attributes Demonstration</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Table Attributes Demonstration</h1>
+
+    <table border="1" cellpadding="10" cellspacing="5" summary="This table demonstrates various attributes.">
+        <caption>Sample Table</caption>
+        <colgroup>
+            <col span="2" style="background-color: #f2f2f2">
+            <col style="background-color: #f9f9f9">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">Header 1</th>
+                <th scope="col">Header 2</th>
+                <th scope="col">Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Rowspan Example</td>
+                <td colspan="2">Colspan Example</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+            </tr>
+            <tr>
+                <td headers="h1">Row 4, Cell 1</td>
+                <td headers="h2">Row 4, Cell 2</td>
+                <td headers="h3">Row 4, Cell 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Table Footer</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning and Background Example</title>
+    <style>
+        
+        body {
+            background-color: #f0f0f0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        .box1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+      
+        .box2 {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 255, 0, 0.5);
+        }
+        
+        .box3 {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+       
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Sticky Header</div>
+    <div class="box1">Absolute Box</div>
+    <div class="box2">Relative Box</div>
+    <div class="box3">Fixed Box</div>
+    <p style="padding: 200px 0;">Scroll down to see the fixed box stay in place and the sticky header.</p>
+</body>
+</html>
+
